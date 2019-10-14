@@ -38,10 +38,17 @@ function grill(currentObject) {
     cookedFood.push(currentObject);
 };
 
-// For each method executes grill function on foods array causing it to be cooked
+// For each method executes grill function on foods array causing it to be cooked.
 foods.forEach(grill);
 
-// For loop loops through cookedFood array and logs it to the console
+
+
+// For loop loops through cookedFood array and logs a string to the console if the cooked key = true,
+// else, we die of salmonella.
 for (i = 0; i < cookedFood.length; i++) {
-    console.log(cookedFood[i]);
+    if (cookedFood[i].cooked == true) {
+    console.log(`The ${cookedFood[i].name} is cooked, let's eat!`)
+    } else {
+        console.log(`The wagon wheel broke and we died of salmonella!`)
+} 
 }
